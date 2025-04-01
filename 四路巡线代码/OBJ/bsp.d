@@ -42,3 +42,4 @@
 ..\obj\bsp.o: ..\HAREWER\LINEWALKING\linewalking.h
 ..\obj\bsp.o: ..\HAREWER\PS2_Control\ps2_control.h
 ..\obj\bsp.o: ..\HAREWER\THREE_LINEWALKING\three_linewalking.h
+..\obj\bsp.o: ..\HAREWER\JY61P\JY61P.h

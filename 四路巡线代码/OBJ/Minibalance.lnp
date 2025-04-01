@@ -30,6 +30,7 @@
 "..\obj\delay.o"
 "..\obj\sys.o"
 "..\obj\usart.o"
+"..\obj\uart2.o"
 "..\obj\bsp.o"
 "..\obj\moto.o"
 "..\obj\pwm.o"
@@ -40,6 +41,8 @@
 "..\obj\iravoid.o"
 "..\obj\ps2_control.o"
 "..\obj\three_linewalking.o"
+"..\obj\wit_c_sdk.o"
+"..\obj\jy61p.o"
 --strict --scatter "..\OBJ\Minibalance.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

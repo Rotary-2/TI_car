@@ -7,6 +7,7 @@
 #include "three_linewalking.h"
 #include "linewalking.h"
 #include "encoder.h"
+#include "JY61P.h"
 
 /*
 
@@ -21,17 +22,24 @@
 	电机    PA6       PA7        PB0        PB1
 				 TIM3_CH1   TIM3_CH2   TIM3_CH3   TIM3_CH4
 
+	USB-TTL                   STM32Core              		  JY901s
+	VCC          -----           VCC        ----        	 VCC
+	TX           -----           RX1  (GPIOA_10)   
+	RX           -----           TX1  (GPIOA_9)
+	GND          -----           GND    ----       			    GND
+															 RX2  (GPIOA_3)  ----       TX
+															 TX2  (GPIOA_2)  ----       RX
+
 */
 
 int Encoder_NUM;
-int i;
+extern float fAngle[3];
 
 
 int main(void)
  {	
 	 /*外设初始化*/
-	bsp_init();
-	 	 
+	bsp_init();	 	 
 	 
   while(1)
 	{
@@ -43,8 +51,10 @@ int main(void)
 		Encoder_NUM = Read_Encoder(4);
 	
 		printf("Right %d\r\n", Encoder_NUM);
+		JY61PWork();
+		printf("angle:%.3f %.3f %.3f\r\n", fAngle[0], fAngle[1], fAngle[2]);
 		
-	Forward(6500);
+//	Forward(6500);
   
 	}
  }

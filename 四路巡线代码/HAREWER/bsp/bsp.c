@@ -15,6 +15,8 @@
 #include "iravoid.h"
 #include "ps2_control.h"
 #include "three_linewalking.h"
+#include "JY61P.h"
+
 /**
 * Function       bsp_init  
 * @brief         硬件设备初始化
@@ -34,7 +36,7 @@ void bsp_init(void)
 		TIM1_Int_Init(9, 72);				/*100Khz的计数频率，计数到10为10us  */ 
 		Encoder_Init_Tim2();
 		LineWalking_GPIO_Init();			/*巡线传感器初始化*/
-
+		JY61PInit();
 	
 }
 
