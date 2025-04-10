@@ -44,6 +44,7 @@ int main(void)
 {	
 	 /*外设初始化*/
 	bsp_init();	 	 
+	
 	 
 	while(1)
 	{
@@ -59,31 +60,24 @@ int main(void)
 	//		JY61PWork();
 	//		printf("angle:%.3f %.3f %.3f\r\n", fAngle[0], fAngle[1], fAngle[2]);
 		
-	//	Forward(4500);
 		
-		printf("%f, %f\r\n", speed1, speed2);
+		
+//		printf("%f, %f\r\n", speed1, speed2);
 		
 		for (speed = 3500; speed < 6500; speed += 500)
 		{
 				for (j = 0; j < 200; j++)
 				{
-						PWMA_IN1=speed;PWMA_IN2=0;  //左前轮  Speed=6000
-						PWMB_IN1=0;PWMB_IN2=speed;  //右前轮
-						printf("%f, %f, %d\r\n", speed1, speed2, speed);
+						Forward(speed);
+//						printf("%f, %f, %d\r\n", speed1, speed2, speed);
 						delay_ms(10);
 				}
-
-//				left_Encoder_NUM = Read_Encoder(2);
-//				right_Encoder_NUM = Read_Encoder(4);
-//				printf("%d, %d, %d\r\n", left_Encoder_NUM, right_Encoder_NUM, speed);
 		}
 		for (speed = 6500; speed > 3500; speed -= 500)
 		{
 				for (j = 0; j < 200; j++)
 				{
-						PWMA_IN1=speed;PWMA_IN2=0;  //左前轮  Speed=6000
-						PWMB_IN1=0;PWMB_IN2=speed;  //右前轮
-						printf("%f, %f, %d\r\n", speed1, speed2, speed);
+						Forward(speed);
 						delay_ms(10);
 				}
 		}

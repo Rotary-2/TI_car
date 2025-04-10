@@ -32,3 +32,4 @@
 ..\obj\encoder.o: ..\SYSTEM\usart\usart.h
 ..\obj\encoder.o: D:\software\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\encoder.o: ..\SYSTEM\sys\sys.h
+..\obj\encoder.o: ..\HAREWARE\MOTO\moto.h

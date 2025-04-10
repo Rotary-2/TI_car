@@ -27,6 +27,7 @@ void bsp_init(void)
     delay_init();    //延时函数初始化
     uart_init(9600);		//串口初始化
 	  PWM_Int(7199,0, 7199,0);      //初始化pwm输出 72000 000 /7199+1=10000 
+		encoderPID_Init();
 
 		Encoder_Init_Tim2();
 		Encoder_Init_Tim4();

@@ -1,5 +1,6 @@
 #include "encoder.h"
 #include "usart.h"	 
+#include "moto.h"
 #include "stm32f10x_gpio.h"
 
 float speed1;
@@ -95,6 +96,7 @@ Output  : none
 入口参数：TIMX：定时器
 返回  值：速度值
 ***************************/
+
 int Read_Encoder(u8 TIMX)
 {
    int Encoder_TIM;    
@@ -108,6 +110,7 @@ int Read_Encoder(u8 TIMX)
 	  if(Encoder_TIM<0)   Encoder_TIM=-Encoder_TIM;          //将编码器读到的数据变为正数
 		return Encoder_TIM;
 }
+
 /**************************************************************************
 Function: TIM4 interrupt service function
 Input   : none
@@ -124,6 +127,7 @@ void TIM4_IRQHandler(void)
 	}				   
 	TIM4->SR&=~(1<<0);//清除中断标志位 	    
 }
+
 /**************************************************************************
 Function: TIM2 interrupt service function
 Input   : none
@@ -143,7 +147,6 @@ void TIM2_IRQHandler(void)
 float Get_Speed_Form_Encoder(int encoder)
 { 	
 	float Distance,Speed;
-//	Distance = 65*3.14159/(4*11*6.3);//电机产生一个脉冲的路径	
 	Distance = 65*3.14159/(4*11*10);//电机产生一个脉冲的路径	
 	Speed = encoder * Distance/0.1 + 3000;	//单位是mm/s。0.1就是编码器计数周期100ms，0.1s
 	
@@ -159,4 +162,5 @@ void TIM1_UP_IRQHandler(void)
       TIM_ClearITPendingBit(TIM1, TIM_IT_Update); // 清除TIM1更新中断标志
     }
 }
+
 

@@ -327,7 +327,7 @@
             <wLevel>2</wLevel>
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
-            <uC99>0</uC99>
+            <uC99>1</uC99>
             <uGnu>0</uGnu>
             <useXO>0</useXO>
             <v6Lang>1</v6Lang>
@@ -599,11 +599,6 @@
               <FileName>wit_c_sdk.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HAREWARE\wit_c_sdk\wit_c_sdk.c</FilePath>
-            </File>
-            <File>
-              <FileName>PID.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HAREWARE\PID\PID.c</FilePath>
             </File>
           </Files>
         </Group>

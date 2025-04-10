@@ -38,7 +38,6 @@
 "..\obj\moto.o"
 "..\obj\pwm.o"
 "..\obj\wit_c_sdk.o"
-"..\obj\pid.o"
 --strict --scatter "..\OBJ\Minibalance.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

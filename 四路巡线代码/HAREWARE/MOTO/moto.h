@@ -11,6 +11,7 @@ void Turnright(int Speed);
 void Stop(void);
 void SpinLeft(int Speed) ;
 void SpinRight(int Speed);
+void setSpeed(void);
 
 
 #endif
