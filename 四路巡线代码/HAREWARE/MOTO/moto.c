@@ -46,7 +46,7 @@ void PID_Calc(PID *pid, float reference, float feedback)
     float pout = pid->error * pid->kp;
     //计算积分
     pid->integral += pid->error * pid->ki;
-	printf("%d,",(int)pid->integral);
+//	printf("%d,",(int)pid->integral);
     //积分限幅
     if(pid->integral > pid->maxIntegral) pid->integral = pid->maxIntegral;
     else if(pid->integral < -pid->maxIntegral) pid->integral = -pid->maxIntegral;
@@ -105,8 +105,8 @@ void Stop(void)
 
 void encoderPID_Init()
 {
-		PID_Init(&L_encoder_pid, 1, 0.1, 1, 1000, 8000);
-		PID_Init(&R_encoder_pid, 1, 0.1, 1, 1000, 8000);
+		PID_Init(&L_encoder_pid, 1.75, 0.12, 0.15, 10000, 8000);
+		PID_Init(&R_encoder_pid, 1.75, 0.12, 0.15, 10000, 8000);
 }
 
 void setSpeed()
@@ -118,11 +118,12 @@ void setSpeed()
 		float LtargetValue = SPEEDA1;
 		float RtargetValue = SPEEDB2;
 		printf("%d,%d,", SPEEDA1, SPEEDB2);
-	
+		printf("%d,%d\r\n", (int)speed1, (int)speed2);
+//	
 		PID_Calc(&L_encoder_pid, LtargetValue, LfeedbackValue);
 		PID_Calc(&R_encoder_pid, RtargetValue, RfeedbackValue);
 	
-		printf("%d,%d\r\n", (int)L_encoder_pid.output, (int)R_encoder_pid.output);
+//		printf("%d,%d\r\n", (int)L_encoder_pid.output, (int)R_encoder_pid.output);
 	
 		PWMA_IN1=(int)L_encoder_pid.output;
 		PWMA_IN2=SPEEDA2;
