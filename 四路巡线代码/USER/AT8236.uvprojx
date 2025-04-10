@@ -341,7 +341,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_MD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\CORE;..\USER;..\STM32F10x_FWLIB\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HAREWER\MOTO;..\HAREWER\PWM;..\HAREWER\GPIO;..\HAREWER\ADC;..\HAREWER\ENCODER;..\HAREWER\SERVO;..\HAREWER\ULTRASONIC;..\HAREWER\LINEWALKING;..\HAREWER\IRAVOID;..\HAREWER\bsp;..\HAREWER\PS2_Control;..\HAREWER\THREE_LINEWALKING;..\HAREWER\wit_c_sdk;..\SYSTEM\USART2;..\HAREWER\JY61P</IncludePath>
+              <IncludePath>..\CORE;..\USER;..\STM32F10x_FWLIB\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HAREWARE\MOTO;..\HAREWARE\PWM;..\HAREWARE\GPIO;..\HAREWARE\ADC;..\HAREWARE\ENCODER;..\HAREWARE\SERVO;..\HAREWARE\ULTRASONIC;..\HAREWARE\LINEWALKING;..\HAREWARE\IRAVOID;..\HAREWARE\wit_c_sdk;..\HAREWARE\PS2_Control;..\HAREWARE\THREE_LINEWALKING;..\HAREWARE\bsp;..\SYSTEM\USART2;..\HAREWARE\JY61P;..\HAREWARE\PID</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -563,67 +563,47 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>HAREWER</GroupName>
+          <GroupName>HAREWARE</GroupName>
           <Files>
             <File>
               <FileName>bsp.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\HAREWER\bsp\bsp.c</FilePath>
-            </File>
-            <File>
-              <FileName>moto.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HAREWER\MOTO\moto.c</FilePath>
-            </File>
-            <File>
-              <FileName>pwm.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HAREWER\PWM\pwm.c</FilePath>
-            </File>
-            <File>
-              <FileName>adc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HAREWER\ADC\adc.c</FilePath>
+              <FilePath>..\HAREWARE\bsp\bsp.c</FilePath>
             </File>
             <File>
               <FileName>encoder.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\HAREWER\ENCODER\encoder.c</FilePath>
-            </File>
-            <File>
-              <FileName>servo.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HAREWER\SERVO\servo.c</FilePath>
-            </File>
-            <File>
-              <FileName>linewalking.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HAREWER\LINEWALKING\linewalking.c</FilePath>
-            </File>
-            <File>
-              <FileName>iravoid.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HAREWER\IRAVOID\iravoid.c</FilePath>
-            </File>
-            <File>
-              <FileName>ps2_control.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HAREWER\PS2_Control\ps2_control.c</FilePath>
-            </File>
-            <File>
-              <FileName>three_linewalking.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HAREWER\THREE_LINEWALKING\three_linewalking.c</FilePath>
-            </File>
-            <File>
-              <FileName>wit_c_sdk.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HAREWER\wit_c_sdk\wit_c_sdk.c</FilePath>
+              <FilePath>..\HAREWARE\ENCODER\encoder.c</FilePath>
             </File>
             <File>
               <FileName>JY61P.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\HAREWER\JY61P\JY61P.c</FilePath>
+              <FilePath>..\HAREWARE\JY61P\JY61P.c</FilePath>
+            </File>
+            <File>
+              <FileName>linewalking.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HAREWARE\LINEWALKING\linewalking.c</FilePath>
+            </File>
+            <File>
+              <FileName>moto.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HAREWARE\MOTO\moto.c</FilePath>
+            </File>
+            <File>
+              <FileName>pwm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HAREWARE\PWM\pwm.c</FilePath>
+            </File>
+            <File>
+              <FileName>wit_c_sdk.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HAREWARE\wit_c_sdk\wit_c_sdk.c</FilePath>
+            </File>
+            <File>
+              <FileName>PID.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HAREWARE\PID\PID.c</FilePath>
             </File>
           </Files>
         </Group>

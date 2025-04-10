@@ -1,4 +1,4 @@
-..\obj\linewalking.o: ..\HAREWER\LINEWALKING\linewalking.c
+..\obj\linewalking.o: ..\HAREWARE\LINEWALKING\linewalking.c
 ..\obj\linewalking.o: ..\USER\stm32f10x.h
 ..\obj\linewalking.o: ..\CORE\core_cm3.h
 ..\obj\linewalking.o: D:\software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
@@ -28,9 +28,9 @@
 ..\obj\linewalking.o: ..\STM32F10x_FWLIB\inc\stm32f10x_usart.h
 ..\obj\linewalking.o: ..\STM32F10x_FWLIB\inc\stm32f10x_wwdg.h
 ..\obj\linewalking.o: ..\STM32F10x_FWLIB\inc\misc.h
-..\obj\linewalking.o: ..\HAREWER\LINEWALKING\linewalking.h
+..\obj\linewalking.o: ..\HAREWARE\LINEWALKING\linewalking.h
 ..\obj\linewalking.o: ..\SYSTEM\sys\sys.h
-..\obj\linewalking.o: ..\HAREWER\MOTO\moto.h
+..\obj\linewalking.o: ..\HAREWARE\MOTO\moto.h
 ..\obj\linewalking.o: ..\SYSTEM\delay\delay.h
 ..\obj\linewalking.o: ..\SYSTEM\usart\usart.h
 ..\obj\linewalking.o: D:\software\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

@@ -7,14 +7,9 @@
 #include "bsp.h"
 #include "moto.h"
 #include "pwm.h"
-#include "adc.h"
 #include "usart.h"
 #include "encoder.h"
-#include "servo.h"
 #include "linewalking.h"
-#include "iravoid.h"
-#include "ps2_control.h"
-#include "three_linewalking.h"
 #include "JY61P.h"
 
 /**
@@ -33,8 +28,10 @@ void bsp_init(void)
     uart_init(9600);		//串口初始化
 	  PWM_Int(7199,0, 7199,0);      //初始化pwm输出 72000 000 /7199+1=10000 
 
-		TIM1_Int_Init(9, 72);				/*100Khz的计数频率，计数到10为10us  */ 
 		Encoder_Init_Tim2();
+		Encoder_Init_Tim4();
+		Timer_Init();
+	
 		LineWalking_GPIO_Init();			/*巡线传感器初始化*/
 		JY61PInit();
 	

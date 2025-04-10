@@ -9,6 +9,7 @@
 
 
 void PWM_Int(u16 arr,u16 psc, u16 arr2,u16 psc2);
+void Timer_Init(void);
 //void Set_PWM(int motor1_left,int motor1_right,int motor2_left,int motor2_right);
 
 #endif

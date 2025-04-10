@@ -1,5 +1,5 @@
-..\obj\pwm.o: ..\HAREWER\PWM\pwm.c
-..\obj\pwm.o: ..\HAREWER\PWM\pwm.h
+..\obj\pwm.o: ..\HAREWARE\PWM\pwm.c
+..\obj\pwm.o: ..\HAREWARE\PWM\pwm.h
 ..\obj\pwm.o: ..\USER\stm32f10x.h
 ..\obj\pwm.o: ..\CORE\core_cm3.h
 ..\obj\pwm.o: D:\software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h

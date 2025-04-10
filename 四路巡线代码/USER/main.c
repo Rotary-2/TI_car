@@ -22,6 +22,7 @@
 	电机    PA6       PA7        PB0        PB1
 				 TIM3_CH1   TIM3_CH2   TIM3_CH3   TIM3_CH4
 
+	姿态传感器
 	USB-TTL                   STM32Core              		  JY901s
 	VCC          -----           VCC        ----        	 VCC
 	TX           -----           RX1  (GPIOA_10)   
@@ -29,33 +30,65 @@
 	GND          -----           GND    ----       			    GND
 															 RX2  (GPIOA_3)  ----       TX
 															 TX2  (GPIOA_2)  ----       RX
-
 */
 
-int Encoder_NUM;
+int left_Encoder_NUM;
+int right_Encoder_NUM;
 extern float fAngle[3];
-
+int speed;
+extern float speed1;
+extern float speed2;
+int j;
 
 int main(void)
- {	
+{	
 	 /*外设初始化*/
 	bsp_init();	 	 
 	 
-  while(1)
+	while(1)
 	{
-	
-//	  LineWalking();		//四路巡线模式
-		Encoder_NUM = Read_Encoder(2);
-	
-		printf("Left %d  ", Encoder_NUM);
-		Encoder_NUM = Read_Encoder(4);
-	
-		printf("Right %d\r\n", Encoder_NUM);
-		JY61PWork();
-		printf("angle:%.3f %.3f %.3f\r\n", fAngle[0], fAngle[1], fAngle[2]);
+
+	//	  LineWalking();		//四路巡线模式
+	//		left_Encoder_NUM = Read_Encoder(2);
+	//	
+	////		printf("Left %d  ", left_Encoder_NUM);
+	//		right_Encoder_NUM = Read_Encoder(4);
+	//		printf("%d %d\r\n", left_Encoder_NUM, right_Encoder_NUM);
+
+	//		printf("Right %d\r\n", right_Encoder_NUM);
+	//		JY61PWork();
+	//		printf("angle:%.3f %.3f %.3f\r\n", fAngle[0], fAngle[1], fAngle[2]);
 		
-//	Forward(6500);
-  
+	//	Forward(4500);
+		
+		printf("%f, %f\r\n", speed1, speed2);
+		
+		for (speed = 3500; speed < 6500; speed += 500)
+		{
+				for (j = 0; j < 200; j++)
+				{
+						PWMA_IN1=speed;PWMA_IN2=0;  //左前轮  Speed=6000
+						PWMB_IN1=0;PWMB_IN2=speed;  //右前轮
+						printf("%f, %f, %d\r\n", speed1, speed2, speed);
+						delay_ms(10);
+				}
+
+//				left_Encoder_NUM = Read_Encoder(2);
+//				right_Encoder_NUM = Read_Encoder(4);
+//				printf("%d, %d, %d\r\n", left_Encoder_NUM, right_Encoder_NUM, speed);
+		}
+		for (speed = 6500; speed > 3500; speed -= 500)
+		{
+				for (j = 0; j < 200; j++)
+				{
+						PWMA_IN1=speed;PWMA_IN2=0;  //左前轮  Speed=6000
+						PWMB_IN1=0;PWMB_IN2=speed;  //右前轮
+						printf("%f, %f, %d\r\n", speed1, speed2, speed);
+						delay_ms(10);
+				}
+		}
 	}
- }
+}
+
+
 

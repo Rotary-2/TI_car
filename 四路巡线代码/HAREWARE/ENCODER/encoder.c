@@ -1,5 +1,9 @@
 #include "encoder.h"
+#include "usart.h"	 
 #include "stm32f10x_gpio.h"
+
+float speed1;
+float speed2;
 
 /*******************************************************
 Function:Initialize TIM2 to encoder interface mode
@@ -65,7 +69,7 @@ void Encoder_Init_Tim4(void)
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8|GPIO_Pin_9;	//端口配置
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING; //浮空输入
   GPIO_Init(GPIOB, &GPIO_InitStructure);					      //根据设定参数初始化GPIOB
-  
+	
   TIM_TimeBaseStructInit(&TIM_TimeBaseStructure);
   TIM_TimeBaseStructure.TIM_Prescaler = 0x0; // 预分频器 
   TIM_TimeBaseStructure.TIM_Period = 65535; //设定计数器自动重装值
@@ -134,5 +138,25 @@ void TIM2_IRQHandler(void)
 	{    				   				     	    	
 	}				   
 	TIM2->SR&=~(1<<0);//清除中断标志位 	    
+}
+
+float Get_Speed_Form_Encoder(int encoder)
+{ 	
+	float Distance,Speed;
+//	Distance = 65*3.14159/(4*11*6.3);//电机产生一个脉冲的路径	
+	Distance = 65*3.14159/(4*11*10);//电机产生一个脉冲的路径	
+	Speed = encoder * Distance/0.1 + 3000;	//单位是mm/s。0.1就是编码器计数周期100ms，0.1s
+	
+	return Speed;
+}
+
+void TIM1_UP_IRQHandler(void)
+{
+    if (TIM_GetITStatus(TIM1, TIM_IT_Update) != RESET) // 检查TIM1更新中断发生与否
+    {
+			speed1 = Get_Speed_Form_Encoder(Read_Encoder(2));
+			speed2 = Get_Speed_Form_Encoder(Read_Encoder(4));
+      TIM_ClearITPendingBit(TIM1, TIM_IT_Update); // 清除TIM1更新中断标志
+    }
 }
 

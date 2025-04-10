@@ -1,5 +1,5 @@
-..\obj\bsp.o: ..\HAREWER\bsp\bsp.c
-..\obj\bsp.o: ..\HAREWER\bsp\bsp.h
+..\obj\bsp.o: ..\HAREWARE\bsp\bsp.c
+..\obj\bsp.o: ..\HAREWARE\bsp\bsp.h
 ..\obj\bsp.o: ..\SYSTEM\delay\delay.h
 ..\obj\bsp.o: ..\SYSTEM\sys\sys.h
 ..\obj\bsp.o: ..\USER\stm32f10x.h
@@ -33,13 +33,9 @@
 ..\obj\bsp.o: ..\STM32F10x_FWLIB\inc\misc.h
 ..\obj\bsp.o: ..\SYSTEM\usart\usart.h
 ..\obj\bsp.o: D:\software\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-..\obj\bsp.o: ..\HAREWER\ADC\adc.h
-..\obj\bsp.o: ..\HAREWER\MOTO\moto.h
-..\obj\bsp.o: ..\HAREWER\PWM\pwm.h
-..\obj\bsp.o: ..\HAREWER\ENCODER\encoder.h
-..\obj\bsp.o: ..\HAREWER\IRAVOID\iravoid.h
-..\obj\bsp.o: ..\HAREWER\SERVO\servo.h
-..\obj\bsp.o: ..\HAREWER\LINEWALKING\linewalking.h
-..\obj\bsp.o: ..\HAREWER\PS2_Control\ps2_control.h
-..\obj\bsp.o: ..\HAREWER\THREE_LINEWALKING\three_linewalking.h
-..\obj\bsp.o: ..\HAREWER\JY61P\JY61P.h
+..\obj\bsp.o: ..\HAREWARE\MOTO\moto.h
+..\obj\bsp.o: ..\HAREWARE\PWM\pwm.h
+..\obj\bsp.o: ..\HAREWARE\ENCODER\encoder.h
+..\obj\bsp.o: ..\HAREWARE\SERVO\servo.h
+..\obj\bsp.o: ..\HAREWARE\LINEWALKING\linewalking.h
+..\obj\bsp.o: ..\HAREWARE\JY61P\JY61P.h

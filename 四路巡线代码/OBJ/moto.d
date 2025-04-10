@@ -1,5 +1,5 @@
-..\obj\moto.o: ..\HAREWER\MOTO\moto.c
-..\obj\moto.o: ..\HAREWER\MOTO\moto.h
+..\obj\moto.o: ..\HAREWARE\MOTO\moto.c
+..\obj\moto.o: ..\HAREWARE\MOTO\moto.h
 ..\obj\moto.o: ..\USER\stm32f10x.h
 ..\obj\moto.o: ..\CORE\core_cm3.h
 ..\obj\moto.o: D:\software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
@@ -29,4 +29,4 @@
 ..\obj\moto.o: ..\STM32F10x_FWLIB\inc\stm32f10x_usart.h
 ..\obj\moto.o: ..\STM32F10x_FWLIB\inc\stm32f10x_wwdg.h
 ..\obj\moto.o: ..\STM32F10x_FWLIB\inc\misc.h
-..\obj\moto.o: ..\HAREWER\PWM\PWM.h
+..\obj\moto.o: ..\HAREWARE\PWM\PWM.h

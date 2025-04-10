@@ -1,5 +1,5 @@
-..\obj\jy61p.o: ..\HAREWER\JY61P\JY61P.c
-..\obj\jy61p.o: ..\HAREWER\JY61P\JY61P.h
+..\obj\jy61p.o: ..\HAREWARE\JY61P\JY61P.c
+..\obj\jy61p.o: ..\HAREWARE\JY61P\JY61P.h
 ..\obj\jy61p.o: ..\USER\stm32f10x.h
 ..\obj\jy61p.o: ..\CORE\core_cm3.h
 ..\obj\jy61p.o: D:\software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
@@ -29,8 +29,8 @@
 ..\obj\jy61p.o: ..\STM32F10x_FWLIB\inc\stm32f10x_usart.h
 ..\obj\jy61p.o: ..\STM32F10x_FWLIB\inc\stm32f10x_wwdg.h
 ..\obj\jy61p.o: ..\STM32F10x_FWLIB\inc\misc.h
-..\obj\jy61p.o: ..\HAREWER\wit_c_sdk\wit_c_sdk.h
+..\obj\jy61p.o: ..\HAREWARE\wit_c_sdk\wit_c_sdk.h
 ..\obj\jy61p.o: D:\software\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\jy61p.o: D:\software\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-..\obj\jy61p.o: ..\HAREWER\wit_c_sdk\REG.h
+..\obj\jy61p.o: ..\HAREWARE\wit_c_sdk\REG.h
 ..\obj\jy61p.o: ..\SYSTEM\USART2\UART2.h

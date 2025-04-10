@@ -1,5 +1,5 @@
-..\obj\encoder.o: ..\HAREWER\ENCODER\encoder.c
-..\obj\encoder.o: ..\HAREWER\ENCODER\encoder.h
+..\obj\encoder.o: ..\HAREWARE\ENCODER\encoder.c
+..\obj\encoder.o: ..\HAREWARE\ENCODER\encoder.h
 ..\obj\encoder.o: ..\USER\stm32f10x.h
 ..\obj\encoder.o: ..\CORE\core_cm3.h
 ..\obj\encoder.o: D:\software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
@@ -29,3 +29,6 @@
 ..\obj\encoder.o: ..\STM32F10x_FWLIB\inc\stm32f10x_usart.h
 ..\obj\encoder.o: ..\STM32F10x_FWLIB\inc\stm32f10x_wwdg.h
 ..\obj\encoder.o: ..\STM32F10x_FWLIB\inc\misc.h
+..\obj\encoder.o: ..\SYSTEM\usart\usart.h
+..\obj\encoder.o: D:\software\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\encoder.o: ..\SYSTEM\sys\sys.h

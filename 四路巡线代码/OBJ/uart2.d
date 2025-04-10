@@ -29,6 +29,6 @@
 ..\obj\uart2.o: ..\STM32F10x_FWLIB\inc\stm32f10x_usart.h
 ..\obj\uart2.o: ..\STM32F10x_FWLIB\inc\stm32f10x_wwdg.h
 ..\obj\uart2.o: ..\STM32F10x_FWLIB\inc\misc.h
-..\obj\uart2.o: ..\HAREWER\wit_c_sdk\wit_c_sdk.h
+..\obj\uart2.o: ..\HAREWARE\wit_c_sdk\wit_c_sdk.h
 ..\obj\uart2.o: D:\software\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-..\obj\uart2.o: ..\HAREWER\wit_c_sdk\REG.h
+..\obj\uart2.o: ..\HAREWARE\wit_c_sdk\REG.h
