@@ -105,8 +105,8 @@ void Stop(void)
 
 void encoderPID_Init()
 {
-		PID_Init(&L_encoder_pid, 1, 0.1, 0.5, 7000, 8000);
-		PID_Init(&R_encoder_pid, 1, 0.1, 0.5, 7000, 8000);
+		PID_Init(&L_encoder_pid, 1, 0.1, 1, 1000, 8000);
+		PID_Init(&R_encoder_pid, 1, 0.1, 1, 1000, 8000);
 }
 
 void setSpeed()
