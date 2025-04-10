@@ -97,6 +97,8 @@ void GetLineWalking(int *p_iL1, int *p_iL2, int *p_iR1, int *p_iR2)
 * @retval        void
 * @par History   无
 */
+int flag = 4;
+
 void LineWalking(void)
 {
 		int LineL1 = 1, LineL2 = 1, LineR1 = 1, LineR2 = 1;
@@ -116,34 +118,63 @@ void LineWalking(void)
 //		    delay_ms(80);
 //			  printf("左锐角\r\n");
 //    }  
-    if( LineL1 == LOW ) //左最外侧检测
-    {  
-//	 	    SpinLeft(7000);
-	 	    delay_ms(10);
-			  printf("左最外侧\r\n");
-	  }
-    else if ( LineR2 == LOW) //右最外侧检测
-    {  
-//		    SpinRight(7000);
-		    delay_ms(10);
-			  printf("右最外侧\r\n");  
-	  }
-    else if (LineL2 == LOW && LineR1 == HIGH) //中间黑线上的传感器微调车左转
+//    if( LineL1 == LOW ) //左最外侧检测
+//    {  
+////	 	    SpinLeft(7000);
+//	 	    delay_ms(10);
+//			  printf("左最外侧\r\n");
+//	  }
+//    else if ( LineR2 == LOW) //右最外侧检测
+//    {  
+////		    SpinRight(7000);
+//		    delay_ms(10);
+//			  printf("右最外侧\r\n");  
+//	  }
+//Forward(4000);
+		
+    if (LineL2 == LOW && LineR1 == HIGH) //中间黑线上的传感器微调车左转
     {   
-//		    Turnleft(6500);   
+		    Turnleft(4500);   
+				flag = 1;
 			  printf("微调车左转\r\n");
 	  }
 	  else if (LineL2 == HIGH && LineR1 == LOW) //中间黑线上的传感器微调车右转
     {   
-//		    Turnright(6500);   
+		    Turnright(4500);   
+				flag = 2;
 			  printf("微调车右转\r\n");
 	  }
     else if(LineL2 == LOW && LineR1 == LOW) // 都是黑色, 加速前进
     {  
-//		    Forward(6000);
+		    Forward(4000);
+				flag = 3;
 			  printf("加速前进\r\n");
 	  }	
-		
+		else if(LineL1 == HIGH && LineL2 == HIGH && LineR1 == HIGH && LineR2 == HIGH) // 未检测到黑线 停止 
+		{
+				Stop();
+				flag = 4;
+				printf("停止\r\n");
+		}
+		else 
+		{
+				if (flag == 1) 
+				{
+						Turnleft(4500);  
+				}
+				else if (flag == 2) 
+				{
+						Turnright(4500);   
+				}
+				else if (flag == 3) 
+				{
+						Forward(4000); 
+				}
+				else if (flag == 4) 
+				{
+						Stop(); 
+				}
+		}
 	
 }
 

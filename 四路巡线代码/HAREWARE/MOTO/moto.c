@@ -119,11 +119,9 @@ void setSpeed()
 		float RtargetValue = SPEEDB2;
 		printf("%d,%d,", SPEEDA1, SPEEDB2);
 		printf("%d,%d\r\n", (int)speed1, (int)speed2);
-//	
+	
 		PID_Calc(&L_encoder_pid, LtargetValue, LfeedbackValue);
 		PID_Calc(&R_encoder_pid, RtargetValue, RfeedbackValue);
-	
-//		printf("%d,%d\r\n", (int)L_encoder_pid.output, (int)R_encoder_pid.output);
 	
 		PWMA_IN1=(int)L_encoder_pid.output;
 		PWMA_IN2=SPEEDA2;
