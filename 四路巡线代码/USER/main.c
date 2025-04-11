@@ -49,7 +49,7 @@ int main(void)
 	while(1)
 	{
 	
-		 LineWalking();		//四路巡线模式
+//		 LineWalking();		//四路巡线模式
 	//		left_Encoder_NUM = Read_Encoder(2);
 	//	
 	////		printf("Left %d  ", left_Encoder_NUM);
@@ -64,23 +64,22 @@ int main(void)
 //		Forward(6500);
 	
 		
-//		for (speed = 3500; speed < 6500; speed += 500)
-//		{
-//				for (j = 0; j < 200; j++)
-//				{
-//						Forward(speed);
-////						printf("%f, %f, %d\r\n", speed1, speed2, speed);
-//						delay_ms(10);
-//				}
-//		}
-//		for (speed = 6500; speed > 3500; speed -= 500)
-//		{
-//				for (j = 0; j < 200; j++)
-//				{
-//						Forward(speed);
-//						delay_ms(10);
-//				}
-//		}
+		for (speed = 3500; speed < 6500; speed += 500)
+		{
+				for (j = 0; j < 200; j++)
+				{
+						Forward(speed);
+						delay_ms(10);
+				}
+		}
+		for (speed = 6500; speed > 3500; speed -= 500)
+		{
+				for (j = 0; j < 200; j++)
+				{
+						Forward(speed);
+						delay_ms(10);
+				}
+		}
 			
 		//	delay_ms(3000);
 //			Forward(4000);

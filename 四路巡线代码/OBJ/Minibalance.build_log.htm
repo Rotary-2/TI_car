@@ -27,15 +27,16 @@ Project File Date:  04/10/2025
 <h2>Output:</h2>
 *** Using Compiler 'V5.05 update 1 (build 106)', folder: 'D:\software\Keil_v5\ARM\ARMCC\Bin'
 Build target 'Tb6612demo'
-compiling main.c...
 compiling moto.c...
-..\HAREWARE\MOTO\moto.c(120): warning:  #223-D: function "printf" declared implicitly
+..\HAREWARE\MOTO\moto.c(51): warning:  #223-D: function "printf" declared implicitly
+  	printf("%d,%d,%d,",(int)pout, (int)pid->integral, (int)dout);
+..\HAREWARE\MOTO\moto.c(126): warning:  #223-D: function "printf" declared implicitly
   		printf("%d,%d,", SPEEDA1, SPEEDB2);
-..\HAREWARE\MOTO\moto.c: 1 warning, 0 errors
+..\HAREWARE\MOTO\moto.c: 2 warnings, 0 errors
 linking...
-Program Size: Code=11726 RO-data=782 RW-data=132 ZI-data=2452  
+Program Size: Code=11446 RO-data=782 RW-data=144 ZI-data=2448  
 FromELF: creating hex file...
-"..\OBJ\Minibalance.axf" - 0 Error(s), 1 Warning(s).
+"..\OBJ\Minibalance.axf" - 0 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -48,7 +49,7 @@ Package Vendor: Keil
   D:/software/Keil_v5/ARM/Pack/Keil/STM32F1xx_DFP/2.3.0/Device/Include
 
 <h2>Collection of Component Files used:</h2>
-Build Time Elapsed:  00:00:00
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>
